@@ -63,7 +63,7 @@ def genEPG(i, c):
 
 if __name__ == "__main__":
     stime = time.time()
-    prms = {"os": "android", "devicetype": "phone"}
+    prms = {"os": "android", "devicetype": "tv"}
     raw = requests.get(f"{API}/getMobileChannelList/get/", params=prms).json()
     result = raw.get("result")
     with ThreadPoolExecutor(max_workers=5) as e:
